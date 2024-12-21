@@ -4,14 +4,20 @@ description 'east_hud'
 
 shared_script 'config.lua'
 
-client_script 'client/main.lua'
+client_scripts {
+    'client/main.lua'
+}
 
-export 'seatbelt'
+exports {
+    'seatbelt'
+}
 
 ui_page 'ui/index.html'
-
 files {
     'ui/index.html',
     'ui/app.js',
-    'ui/*.css',
+    'ui/reset.css',
+    'ui/style.css',
 }
+
+dependency 'yarn'
