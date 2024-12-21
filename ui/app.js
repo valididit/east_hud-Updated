@@ -32,6 +32,20 @@ window.addEventListener('message', (event) => {
         } else {
             document.querySelector('.armour i').style.opacity = 1;
         }
+    } else if (event.data.action === 'stamina' && event.data.stamina || event.data.stamina === 0) {
+        document.querySelector('.stamina .fill').style.height = event.data.stamina + '%';
+        if (event.data.stamina <= 0) {
+            document.querySelector('.stamina i').style.opacity = 0.502;
+        } else {
+            document.querySelector('.stamina i').style.opacity = 1;
+        }
+    } else if (event.data.action === 'swimming' && event.data.swimming || event.data.swimming === 0) {
+        document.querySelector('.swim .fill').style.height = event.data.swimming + '%';
+        if (event.data.swimming <= 0) {
+            document.querySelector('.swim i').style.opacity = 0.502;
+        } else {
+            document.querySelector('.swim i').style.opacity = 1;
+        }
     } else if (event.data.action === 'food' && event.data.food || event.data.food === 0) {
         document.querySelector('.food .fill').style.height = event.data.food + '%';
         if (event.data.food <= 0) {
@@ -86,6 +100,7 @@ window.addEventListener('message', (event) => {
         }
     }
 });
+
 
 function animateValue(id, start, end, duration) {
     if (start === end) return;
