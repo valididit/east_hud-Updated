@@ -33,12 +33,13 @@ body {
     transition: 200ms ease-out;
 }
 
-i {
+
+.circle i {
     position: absolute;
     align-self: center;
     color: white;
     font-size: 2.2em;
-    opacity: 0.502;
+    opacity: 1;
     transition: 200ms ease-out;
 }
 
@@ -118,6 +119,22 @@ i {
 
 .seatbelt .fill {
     background-color: #fb8c00;
+}
+
+.stamina {
+    background-color: #81C78440;
+}
+
+.stamina .fill {
+    background-color: #43A047;
+}
+
+.swim {
+    background-color: #29B6F640;
+}
+
+.swim .fill {
+    background-color: #0288D1;
 }
 
 .fuel {
